@@ -1,0 +1,45 @@
+# Основное
+base-devel
+git
+neovim
+wget
+curl
+sudo
+
+# Wayland окружение
+sway
+xdg-desktop-portal-hyprland
+waybar
+alacritty
+rofi
+wl-clipboard
+grim
+slurp
+
+# Fonts
+ttf-jetbrains-mono-nerd
+noto-fonts
+noto-fonts-emoji
+ttf-font-awesome
+
+# PipeWire (звук)
+pipewire
+pipewire-alsa
+pipewire-pulse
+pipewire-jack
+wireplumber
+
+# Сеть
+networkmanager
+
+# Файловый менеджер
+nautilus
+gvfs
+
+# Bluetooth (если нужен)
+bluez
+bluez-utils
+
+# Полезности
+brightnessctl
+

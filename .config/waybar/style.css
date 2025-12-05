@@ -1,0 +1,130 @@
+/* ======================= Общие настройки ======================= */
+* {
+  font-family: "JetBrains Mono", "Symbols Nerd Font", "Font Awesome 6 Free", sans-serif;
+  font-size: 16px;
+}
+
+window#waybar {
+  background-color: transparent;
+  border-radius: 13px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+/* ======================= Блоки модулей ======================= */
+.modules-left,
+.modules-center,
+.modules-right {
+  background: #181926; /* crust */
+  border-radius: 18px;
+  padding: 2px 14px;
+}
+
+/* Убираем фон у отдельных модулей */
+#workspaces,
+#window,
+#tray,
+#pulseaudio,
+#cpu,
+#memory,
+#battery,
+#network,
+#temperature,
+#clock,
+#language,
+#custom-fan,
+#custom-disk,
+#custom-uptime,
+#custom-player,
+#custom-power,
+#custom-brightness {
+  background: transparent;
+  margin: 0;
+  padding: 0 12px;
+  color: #ffffff; /* text */
+}
+
+#tray {
+  background: #181926;
+  padding: 4px 10px;
+  margin: 3px 5px;
+}
+
+#workspaces,
+#window {
+  background: #181926;
+  border-radius: 12px;
+  padding: 4px 10px;
+  margin: 3px 5px;
+}
+
+/* ======================= Workspaces ======================= */
+#workspaces button {
+  padding: 0 6px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f4dbd6; /* rosewater */
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button.focused {
+  background-color: #f4dbd6; /* rosewater */
+  color: #24273a;          /* base */
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+  background-color: #ed8796; /* red */
+}
+
+/* ======================= Tray ======================= */
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #ee99a0; /* maroon */
+}
+
+/* ======================= Hover эффекты ======================= */
+#pulseaudio:hover,
+#cpu:hover,
+#memory:hover,
+#battery:hover,
+#network:hover,
+#temperature:hover,
+#clock:hover {
+  background-color: #6e738d; /* overlay0 */
+}
+
+/* ======================= Battery States ======================= */
+#battery.charging,
+#battery.plugged {
+  color: #cad3f5; /* text */
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* ======================= Animations ======================= */
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}
+
+label:focus {
+  background-color: #000000;
+}
+
